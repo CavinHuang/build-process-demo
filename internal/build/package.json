@@ -1,5 +1,5 @@
 {
-  "name": "build-process-demo",
+  "name": "build",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4"
+    "@types/node": "*"
   }
 }

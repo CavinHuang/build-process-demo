@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite-plugin-dts": "^2.1.0"
+  }
 }

@@ -1,19 +1,22 @@
 {
   "name": "build-process-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "pnpm run clean:dist && pnpm run --stream -r clean",
     "clean:dist": "rimraf dist",
     "build": "pnpm --filter \"./internal/build\" start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release:bump": "bumpp package.json demo/package.json packages/*/package.json --execute=\"pnpm standard-version --skip.bump --skip.commit --skip.tag && git add CHANGELOG.md\" --commit \"chore(release): publish v%s\" --all --tag --push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@vue/tsconfig": "^0.1.3",
+    "bumpp": "^9.0.0",
+    "standard-version": "^9.5.0",
     "sucrase": "^3.29.0",
     "typescript": "^4.9.5",
     "vite": "^4.1.4"

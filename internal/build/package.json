@@ -1,18 +1,31 @@
 {
-  "name": "build",
+  "name": "@build-process-demo/build",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "start": "gulp --require sucrase/register/ts -f gulpfile.ts",
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "vue": "3.2.33"
+  },
   "devDependencies": {
     "@types/node": "*",
     "@vitejs/plugin-vue": "^4.0.0",
+    "chalk": "^4.1.2",
+    "consola": "^2.15.3",
     "gulp": "^4.0.2",
-    "vite-plugin-dts": "^2.1.0"
+    "vite-plugin-dts": "^2.1.0",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@types/gulp": "^4.0.10"
   }
 }

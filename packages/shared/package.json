@@ -11,6 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
-    "vite-plugin-dts": "^2.1.0"
+    "chalk": "^5.2.0",
+    "consola": "^2.15.3",
+    "vite-plugin-dts": "^2.1.0",
+    "vue": "^3.2.47"
   }
 }

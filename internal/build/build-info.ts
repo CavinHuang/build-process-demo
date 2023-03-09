@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import type { InlineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export const buildInfo = defineConfig({
   plugins: [
-    vue(),
-    dts()
+    vue()
   ],
   build: {
     outDir: 'dist',
@@ -15,6 +14,8 @@ export const buildInfo = defineConfig({
       name: 'GalaUi',
       fileName: (format, entryName) => `${entryName.replace(/[\/src]/ig, '')}.${format}.js`,
     },
+    target: 'es2018',
+    sourcemap: true,
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
       external: ['vue'],
@@ -26,4 +27,4 @@ export const buildInfo = defineConfig({
       }
     }
   }
-})
+}) as InlineConfig

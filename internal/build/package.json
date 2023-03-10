@@ -17,6 +17,7 @@
     "vue": "3.2.33"
   },
   "devDependencies": {
+    "@types/gulp": "^4.0.10",
     "@types/node": "*",
     "@vitejs/plugin-vue": "^4.0.0",
     "chalk": "^4.1.2",
@@ -24,8 +25,5 @@
     "gulp": "^4.0.2",
     "vite-plugin-dts": "^2.1.0",
     "vue": "^3.2.47"
-  },
-  "dependencies": {
-    "@types/gulp": "^4.0.10"
   }
 }
